@@ -8,6 +8,10 @@ gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
 
 # postgress
 gem 'pg'
+
+# device authentication
+gem 'devise'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
