@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+userOne=User.create(name: 'Tadesse Alemayehu')
+userTwo=User.create(name: 'mar y sol Bautista')
+
+(1..5).each do |i|
+  Food.create(user: userOne,name: "tibs#{i}",price: 120+i, quantity: i)
+end
+(1..5).each do |i|
+  Recipe.create(user: userTwo,name: "tibs#{i}",preparation_time: "#{10+i}", cooking_time: "#{12+i}", public: true)
+end
