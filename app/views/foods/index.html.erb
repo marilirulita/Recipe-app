@@ -1,2 +1,12 @@
-<h1> <%= @my_foods.length%> </h1>
+<table>
+  <tr><th>Food</th><th>Measurement unit</th><th>Unit proice</th><th>Action</th></tr>
+  <% @my_foods.each do |food| %>
+  <tr>
+    <td><%= food.name%></td>
+    <td><%= food.measurement_unit%></td>
+    <td><%= food.price%></td>
+    <td><%= link_to 'Delete', user_food_path(id: food), method: "delete" %></td>
+  </tr>
+  <% end %>
 
+</table>
