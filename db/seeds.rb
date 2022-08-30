@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-userOne=User.create(name: 'Tadesse Alemayehu')
-userTwo=User.create(name: 'mar y sol Bautista')
+userOne=User.create(name: 'Tadesse Alemayehu',email: "tadesse@gmail.com", password: '123456')
+userTwo=User.create(name: 'mar y sol Bautista',email: "mar@gmail.com", password: '123456')
 
 (1..5).each do |i|
   Food.create(user: userOne,name: "tibs#{i}",price: 120+i, quantity: i)
