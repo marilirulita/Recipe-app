@@ -17,9 +17,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_215859) do
   create_table "foods", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "name", null: false
+<<<<<<< HEAD
     t.string "measurement_unit", default: "pcs", null: false
     t.integer "price", default: 0, null: false
     t.integer "quantity", default: 1, null: false
+=======
+    t.integer "preparation_time", null: false
+    t.integer "cooking_time", null: false
+    t.text "description"
+    t.boolean "public", default: true, null: false
+>>>>>>> 7dd6b5e6723be8c681f30ec75e2c0a1ee93cf1a7
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_foods_on_user_id"
