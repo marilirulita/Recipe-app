@@ -1,9 +1,13 @@
-<h1>New recipe</h1>
-
-<%= render "form", recipe: @recipe %>
-
-<br>
-
-<div>
-  <%= link_to "Back to recipes", recipes_path %>
+<div class='form_section'>
+  <%= form_with url: "/recipes", scope: :recipe do |f| %>
+    <%= f.text_field :name, placeholder: 'Name' %>
+    <%= f.text_field :preparation_time, placeholder: 'Preparation Time' %>
+    <%= f.text_field :cooking_time, placeholder: 'Cooking Time' %>
+    <%= f.text_field :description, placeholder: 'Description' %>
+    <div>
+    <%= f.label :public, "Select if you want your recipe to be public" %>
+    <%= f.check_box :public, {}, "true", "false" %>
+    </div>
+    <%= f.submit "Submit" %>
+  <% end %> 
 </div>
