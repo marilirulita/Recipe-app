@@ -18,6 +18,12 @@ class RecipesController < ApplicationController
   # GET /recipes/1/edit
   def edit; end
 
+  def update
+    @recipe_food = RecipeFood.find(params[:id])
+    @recipe_food.update(recipe_food_params)
+    redirect_to recipe_path(@recipe_food.recipe)
+  end
+
   # POST /recipes or /recipes.json
   def create
     @recipe = current_user.recipes.new(recipe_params)
@@ -36,6 +42,13 @@ class RecipesController < ApplicationController
     @recipe = current_user.recipes.find(params[:id])
     @recipe.destroy
     redirect_to request.referrer
+  end
+
+  def toggle_public
+    @recipe = Recipe.find_by_id(params[:recipe_id])
+    @recipe.public = !@recipe.public
+
+    redirect_to recipe_path(@recipe.id), notice: 'Recipe updated' if @recipe.save
   end
 
   private

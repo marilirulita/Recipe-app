@@ -1,8 +1,19 @@
 <h2><%= @recipe.name.capitalize %></h2>
 <div class='content_details'>
+  <div>
   <p>Preparation Time: <%= "#{@recipe.preparation_time} hours" %></p>
   <p>Cooking Time: <%= "#{@recipe.cooking_time} hours" %></p>
   <p><%= @recipe.description %></p>
+  </div>
+  <div class="toggle_section">
+  <p>Change it to public or private</p>
+  <% if @recipe.public %>
+    <%= button_to "Private", toggle_public_path(@recipe.id), method: :patch  %>
+  <% else %>
+    <%= button_to "Public", toggle_public_path(@recipe.id), method: :patch  %>
+  <% end %>
+  </div>
+
 </div>
 
 <div class='recipe_show_buttons'>
