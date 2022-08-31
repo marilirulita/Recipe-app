@@ -1,2 +1,14 @@
-<h1>ShopingLists#index</h1>
-<p>Find me in app/views/shoping_lists/index.html.erb</p>
+<h1>General shoping list</h1>
+<table>
+  <tr><th>Food</th><th>quantity</th><th>price</th></tr>
+  <% @shoping_lists.each do |food| %>
+  <tr>
+    <td><%= food.name%></td>
+    <td><%= food.quantity%></td>
+    <td>$<%= food.price%></td>
+  </tr>
+  <% end %>
+
+</table>
+    <%= button_to '<< Go back', :back, method: :get%>
+
