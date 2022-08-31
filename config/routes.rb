@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'shoping_lists/index'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: [:index, :show] do
