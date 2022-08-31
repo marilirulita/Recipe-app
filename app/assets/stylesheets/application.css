@@ -13,8 +13,17 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  padding: 1rem;
+ }
+
  h4 {
   margin: 0;
+ }
+
+ .container {
+  margin: 0 auto;
+  max-width: 700px;
  }
 
  .list_container {
@@ -48,6 +57,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 1rem;
  }
 
  .element .left h4 {
