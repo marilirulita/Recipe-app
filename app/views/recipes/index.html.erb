@@ -7,7 +7,12 @@
   <div class='element'>
     <div class='left'>
       <h4><%= link_to recipe.name.capitalize, recipe %></h4>
-      <%= link_to 'Remove', recipe_path(recipe), method: :delete %>
+      
+      <%= link_to "Remove", recipe_path(recipe), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      } %>
+      <%= @recipe %>
     </div>
     <div class='rigth'>
     <%= recipe.description %>
