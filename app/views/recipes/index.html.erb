@@ -1,14 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<section class="users_list">
+  <h1>Recipes List</h1>
 
-<h1>Recipes</h1>
+  <div>
+    <%= link_to 'Create a Recipe', new_recipe_path %> 
+  </div
 
-<div id="recipes">
-  <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-    <p>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
+  <% flash.each do |type, msg| %>
+    <%= content_tag :div, msg, class: "#{type} alert" %>
   <% end %>
-</div>
+  <% @recipes.each do |recipe| %>
+    <div>
+      <%= link_to recipe.name, recipe %> <br><br>
+      <%= recipe.description %> <br><br>
+      <%= button_to 'Remove', recipe_path(recipe), method: :delete %>
+      <br><br>
+    </div>
+  <% end %>
 
-<%= link_to "New recipe", new_recipe_path %>
+</section>
