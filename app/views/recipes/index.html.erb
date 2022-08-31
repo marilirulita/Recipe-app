@@ -1,22 +1,21 @@
-<div class='create_button'>
-  <%= link_to 'Add Recipe', new_recipe_path %> 
-</div
-
 <div class='list_container'>
-<% @recipes.each do |recipe| %>
-  <div class='element'>
-    <div class='left'>
-      <h4><%= link_to recipe.name.capitalize, recipe %></h4>
-      
-      <%= link_to "Remove", recipe_path(recipe), data: {
-        turbo_method: :delete,
-        turbo_confirm: "Are you sure?"
-      } %>
-      <%= @recipe %>
-    </div>
-    <div class='rigth'>
-    <%= recipe.description %>
-    </div>
+  <div class='create_button'>
+    <%= link_to 'Create a Recipe', new_recipe_path %> 
   </div>
-<% end %>
+
+  <% flash.each do |type, msg| %>
+    <%= content_tag :div, msg, class: "#{type} alert" %>
+  <% end %>
+  <% @recipes.each do |recipe| %>
+    <div class='element'>
+      <div class='element_left'>
+        <%= link_to recipe.name.capitalize, recipe %> 
+        <%= button_to 'Remove', recipe_path(recipe), method: :delete %> 
+      </div>
+      <div class='element_right'>  
+        <%= recipe.description %>
+      </div>
+
+    </div>
+  <% end %>
 </div>

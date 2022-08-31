@@ -52,7 +52,7 @@
   justify-content: space-between;
  }
 
- .element .left {
+ .element_left {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -60,16 +60,20 @@
   margin-right: 1rem;
  }
 
- .element .left h4 {
+ .element_left a {
+  color: black;
+  text-decoration: none;
   margin-bottom: 1rem;
  }
 
- .element .left h4 a {
-  text-decoration: none;
-  color: #000
+ .element_left button {
+  text-decoration: underline;
+  border: none;
+  background-color: white;
+  color: blue
  }
 
- .element .rigth {
+ .element_rigth {
   flex: 4;
  }
 
