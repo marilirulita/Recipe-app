@@ -5,10 +5,6 @@ class FoodsController < ApplicationController
     @my_foods = Food.where(user: current_user)
   end
 
-  def show
-    puts 'showing a spacific food'
-  end
-
   def new
     @new_food = Food.new
   end
