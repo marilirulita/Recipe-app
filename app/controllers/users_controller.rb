@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
+    before_action :authenticate_user!
   def index
-    redirect_to new_user_session_path unless user_signed_in?
+    redirect_to user_path(id: current_user)
   end
 
-  def show; end
+  def show
+  end
 end
