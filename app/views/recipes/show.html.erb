@@ -1,15 +1,38 @@
-<section class="container">
+<h2><%= @recipe.name.capitalize %></h2>
+<div>
+  <p>Preparation Time: <%= "#{@recipe.preparation_time} hours" %></p>
+  <p>Cooking Time: <%= "#{@recipe.cooking_time} hours" %></p>
+  <p><%= @recipe.description %></p>
+</div>
 
-  <div class="recipe_detail">
-    <h1>Recipe 1</h1>
+<div>
+  <%= link_to "Generate Shopping List" %>
+  <%= link_to "Add Ingredient", new_recipe_recipe_food_path(@recipe) %>
+</div>
 
-   <p>cooking time</p>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th >Food</th>
+        <th>Quantity</th>
+        <th>Value</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
 
-   <p>Step to cook it/p>
+    <% @recipe.recipe_foods.includes([:food]).each do |food| %>
+      <tr>
+        <td><%= food.food.name %></td>
+        <td><%= "#{food.quantity}" %></td>
+        <td><%= "#{food.food.price}" %></td>
+        <td>
+          <%= button_to "Delete", recipe_recipe_food_path(@recipe, food), method: :delete %>
+        </td>
+      </tr>
+      <% end %>
 
-   <button type="button">Genarate shopping list!</button>
-
-   <button type="button">Add Ingridients!</button>
-
-   </div>
-</section>
+    </tbody>
+  </table>
+</div>
