@@ -13,91 +13,92 @@
  *= require_tree .
  *= require_self
  */
- body {
+body {
   padding: 1rem;
- }
+}
 
- h4 {
+h4 {
   margin: 0;
- }
+}
 
- .container {
+.container {
   margin: 0 auto;
   max-width: 700px;
- }
+}
 
- .list_container {
+.list_container {
   display: flex;
   flex-direction: column;
- }
+}
 
 .create_button {
   display: flex;
   justify-content: end;
   margin-bottom: 1rem;
 }
- .create_button a {
+
+.create_button a {
   border: 1px solid black;
   padding: 2px 3px;
   text-decoration: none;
   color: black;
   box-shadow: 4px 5px #000;
- }
+}
 
- .element {
+.element {
   border: 1px solid black;
   margin-bottom: 1rem;
   padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
- }
+}
 
- .element_left {
+.element_left {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 1rem;
- }
+}
 
- .element_left a {
+.element_left a {
   color: black;
   text-decoration: none;
   margin-bottom: 1rem;
- }
+}
 
- .element_left button {
+.element_left button {
   text-decoration: underline;
   border: none;
   background-color: white;
-  color: blue
- }
+  color: blue;
+}
 
- .element_rigth {
+.element_rigth {
   flex: 4;
- }
+}
 
- .form_section {
+.form_section {
   margin: 0 auto;
   max-width: 500px;
- }
+}
 
- .form_section form {
+.form_section form {
   display: flex;
   flex-direction: column;
- }
+}
 
- .form_section form input,
- .form_section form div {
+.form_section form input,
+.form_section form div {
   margin-bottom: 1rem;
   height: 1.5rem;
- }
+}
 
 .form_section form input[type="checkbox"] {
   margin: 0 1rem;
 }
 
- .form_section form div {
+.form_section form div {
   display: flex;
   align-items: center;
- }
+}
