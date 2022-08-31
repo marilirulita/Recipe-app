@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
       puts "user count is #{user_cout}"
       @test_user.save!
       puts "user count is #{user_cout}"
-      expect(user_cout+1).to eql(User.count)
+      expect(user_cout + 1).to eql(User.count)
     end
     it 'expect user to be found' do
       @test_save = User.new(name: 'test user', email: "test#{rand}@gmail.com", password: '123456')
