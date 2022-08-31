@@ -1,20 +1,17 @@
-<section class="users_list">
-  <h1>Recipes List</h1>
+<div class='create_button'>
+  <%= link_to 'Add Recipe', new_recipe_path %> 
+</div
 
-  <div>
-    <%= link_to 'Create a Recipe', new_recipe_path %> 
-  </div
-
-  <% flash.each do |type, msg| %>
-    <%= content_tag :div, msg, class: "#{type} alert" %>
-  <% end %>
-  <% @recipes.each do |recipe| %>
-    <div>
-      <%= link_to recipe.name, recipe %> <br><br>
-      <%= recipe.description %> <br><br>
-      <%= button_to 'Remove', recipe_path(recipe), method: :delete %>
-      <br><br>
+<div class='list_container'>
+<% @recipes.each do |recipe| %>
+  <div class='element'>
+    <div class='left'>
+      <h4><%= link_to recipe.name.capitalize, recipe %></h4>
+      <%= link_to 'Remove', recipe_path(recipe), method: :delete %>
     </div>
-  <% end %>
-
-</section>
+    <div class='rigth'>
+    <%= recipe.description %>
+    </div>
+  </div>
+<% end %>
+</div>
