@@ -6,16 +6,5 @@
   <% flash.each do |type, msg| %>
     <%= content_tag :div, msg, class: "#{type} alert" %>
   <% end %>
-  <% @recipes.each do |recipe| %>
-    <div class='element'>
-      <div class='element_left'>
-        <%= link_to recipe.name.capitalize, recipe %> 
-        <%= button_to 'Remove', recipe_path(recipe), method: :delete %> 
-      </div>
-      <div class='element_right'>  
-        <%= recipe.description %>
-      </div>
-
-    </div>
-  <% end %>
+  <%= render partial: 'recipe', collection: @recipes %>
 </div>
