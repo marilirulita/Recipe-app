@@ -17,6 +17,10 @@ body {
   padding: 1rem;
 }
 
+h2 {
+  text-align: center;
+}
+
 h4 {
   margin: 0;
 }
@@ -37,7 +41,8 @@ h4 {
   margin-bottom: 1rem;
 }
 
-.create_button a {
+.create_button a,
+.recipe_show_buttons a {
   border: 1px solid black;
   padding: 2px 3px;
   text-decoration: none;
@@ -67,10 +72,11 @@ h4 {
   margin-bottom: 1rem;
 }
 
-.element_left button {
+.element_left button,
+.content_table table button {
   text-decoration: underline;
   border: none;
-  background-color: white;
+  background-color: inherit;
   color: blue;
 }
 
@@ -101,4 +107,35 @@ h4 {
 .form_section form div {
   display: flex;
   align-items: center;
+}
+
+.content_details {
+  margin-bottom: 2rem;
+}
+
+.recipe_show_buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid black;
+}
+
+.content_table {
+  border: 1px solid black;
+  margin-top: 2rem;
+}
+
+.content_table table {
+  width: 100%;
+}
+
+.content_table table th {
+  background-color: rgb(192, 189, 189);
+}
+
+.content_table table tbody tr {
+  height: 2rem;
+}
+.content_table table tbody tr:nth-child(odd) {
+  background-color: rgb(235, 232, 232);
 }
