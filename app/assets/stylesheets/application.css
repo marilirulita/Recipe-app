@@ -25,6 +25,7 @@
 .create_button {
   display: flex;
   justify-content: end;
+  margin-bottom: 1rem;
 }
  .create_button a {
   border: 1px solid black;
