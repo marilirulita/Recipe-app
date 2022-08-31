@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: [:index, :show] do
     resources :foods
-    resources :shoping_list, only: [:index]
+    resources :shoping_lists, only: [:index]
   end
   resources :recipes, only: [:index, :show, :new, :create, :destroy]
   resources :public_recipes, only: [:index]
