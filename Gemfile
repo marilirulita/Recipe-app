@@ -12,6 +12,9 @@ gem 'pg'
 # device authentication
 gem 'devise'
 
+#ffi
+gem 'ffi'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
