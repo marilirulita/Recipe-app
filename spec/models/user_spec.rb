@@ -8,5 +8,8 @@ RSpec.describe User, type: :model do
       @test_user.save!
       expect(user_cout+1).to eql(User.count+1)
     end
+    it "expect user to be found" do
+      expect(User.all).to include(@test_user)
+    end
   end
 end
