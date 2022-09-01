@@ -4,7 +4,7 @@
 <div class='element'>
   <div class='element_left_recipes'>
     <h3><%= link_to recipe.name.capitalize, recipe %></h3> 
-    <p><%= "By: #{recipe.user.name}" %></p>
+    <p><%= "By: #{recipe.user.name.capitalize}" %></p>
   </div>
   <div class='element_right'>  
     <p><%= "Total food items: #{recipe.foods.length}" %></p>
