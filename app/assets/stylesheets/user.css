@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Roboto&display=swap");
+.pop-container {
+  background-color: rgb(243, 241, 237);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.514);
+  padding: 3%;
+  max-width: fit-content;
+  font-family: "Roboto", sans-serif;
+}
+.pop-container.centerXY {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pop-container.center-content {
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.success {
+  background-color: rgb(1, 102, 1);
+  border: 2px solid rgb(3, 207, 3);
+  color: rgb(243, 243, 0);
+}
+.info {
+  background-color: rgb(243, 243, 0);
+  border: 2px solid rgb(75, 75, 1);
+  color: green;
+}
+.title {
+  color: red;
+}
