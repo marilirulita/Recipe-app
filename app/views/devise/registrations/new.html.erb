@@ -1,4 +1,4 @@
-<div class='form_section'>
+<div class="pop-container centerXY">
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -22,9 +22,10 @@
   <div class="field">
     <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation" %>
   </div>
-
+<div class="action-buttons">
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: "success"%>
+  </div>
   </div>
 <% end %>
 
