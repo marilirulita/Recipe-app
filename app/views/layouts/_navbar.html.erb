@@ -1,5 +1,8 @@
+<div class='navbar_contain'>
+<h3><%= "Hello #{current_user.name}!" %></h3>
 <div>
 <%= link_to 'Food', user_foods_path(current_user) %> 
 <%= link_to 'Recipes', recipes_path %>
 <%= link_to 'Public Recipes', public_recipes_path %> 
+</div>
 </div>
