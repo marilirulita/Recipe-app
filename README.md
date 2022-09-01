@@ -23,7 +23,7 @@ You must have Ruby installed in your computer.
 
 `rails s`
 
-### ppen `127.0.0.1:3000` on your web browser
+### Open `127.0.0.1:3000` on your web browser
 
 ## Authors
 
