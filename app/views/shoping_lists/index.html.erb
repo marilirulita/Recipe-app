@@ -10,5 +10,7 @@
   <% end %>
 
 </table>
-    <%= button_to 'Home', user_path(current_user), method: :get%>
+    <div class="action-buttons">
+    <%= button_to 'Home', user_path(current_user), method: :get, class: "success"%>
+    </div>
 
