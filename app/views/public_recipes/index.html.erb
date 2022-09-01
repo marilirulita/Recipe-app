@@ -2,7 +2,7 @@
 
 <% @pub_recipes.each do |recipe| %>
 <div class='element'>
-  <div class='element_left'>
+  <div class='element_left_recipes'>
     <h3><%= link_to recipe.name.capitalize, recipe %></h3> 
     <p><%= "By: #{recipe.user.name}" %></p>
   </div>
@@ -12,5 +12,3 @@
   </div>
 </div>
 <% end %>
-
-<%= @sum %>
