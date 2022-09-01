@@ -1,5 +1,5 @@
 <table>
-  <tr><th>Food</th><th>Measurement unit</th><th>Unit proice</th><th>quantity</th><th>Action</th></tr>
+  <tr><th>Food</th><th>Measurement unit</th><th>Unit price</th><th>quantity</th><th>Action</th></tr>
   <% @my_foods.each do |food| %>
   <tr>
     <td><%= food.name%></td>
@@ -12,3 +12,4 @@
 
 </table>
     <%= button_to 'Add new food', new_user_food_path, method: :get%>
+    <%= button_to 'Home', user_path(current_user), method: :get%>

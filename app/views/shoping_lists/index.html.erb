@@ -1,0 +1,14 @@
+<h1>General shoping list</h1>
+<table>
+  <tr><th>Food</th><th>quantity</th><th>price</th></tr>
+  <% @shoping_lists.each do |food| %>
+  <tr>
+    <td><%= food.name%></td>
+    <td><%= food.quantity%></td>
+    <td>$<%= food.price%></td>
+  </tr>
+  <% end %>
+
+</table>
+    <%= button_to 'Home', user_path(current_user), method: :get%>
+
