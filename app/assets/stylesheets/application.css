@@ -35,9 +35,16 @@ h4 {
   padding: 0 1rem;
 }
 
+.navbar_contain h3 a {
+  color: rgb(27, 26, 26);
+  text-decoration: none;
+  border-bottom: 1px solid rgb(27, 26, 26);
+  border-right: 1px solid rgb(27, 26, 26);
+  padding: 0.5rem 0.5rem;
+}
+
 .navbar_contain div {
   display: flex;
-  
 }
 
 .navbar_contain div a {

@@ -1,5 +1,5 @@
 <div class='navbar_contain'>
-<h3><%= "Hello #{current_user.name}!" %></h3>
+<h3><%= link_to "Hi #{current_user.name.capitalize}!", users_path(current_user) %></h3>
 <div>
 <%= link_to 'Food', user_foods_path(current_user) %> 
 <%= link_to 'Recipes', recipes_path %>
