@@ -1,8 +1,8 @@
 <div class='element'>
   <div class='element_left'>
     <%= link_to recipe.name.capitalize, recipe %> 
-    <% if recipe.user_id == current_user.id%>
-    <%= button_to 'Remove', recipe_path(recipe), method: :delete %> 
+    <% if can? :read, recipe %>
+    <%= button_to 'REMOVE', recipe_path(recipe), method: :delete %> 
     <%end%>
   </div>
   <div class='element_right'>  

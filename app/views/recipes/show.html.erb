@@ -6,7 +6,7 @@
   <p><%= @recipe.description %></p>
   </div>
   <div class="toggle_section">
-  <% if @recipe.user_id == current_user.id %>
+  <% if can? :delete, @recipe %>
   <p>Change it to public or private</p>
     <% if @recipe.public %>
       <%= button_to "Private", toggle_public_path(@recipe.id), method: :patch  %>
@@ -18,9 +18,9 @@
 
 </div>
 
-<% if @recipe.user_id == current_user.id %>
+<% if can? :delete, @recipe %>
 <div class='recipe_show_buttons'>
-  <%= link_to "Generate Shopping List" %>
+  <%= link_to "Generate Shopping List", user_shoping_lists_path(@recipe.user) %>
   <%= link_to "Add Ingredient", new_recipe_recipe_food_path(@recipe) %>
 </div>
 <% end %>
@@ -38,13 +38,13 @@
 
     <tbody>
 
-    <% @recipe.recipe_foods.includes([:food]).each do |food| %>
+    <% @recipe_foods.each do |food| %>
       <tr>
         <td><%= food.food.name.capitalize %></td>
         <td><%= "#{food.quantity}" %></td>
         <td><%= "$ #{food.food.price}" %></td>
         <td>
-        <% if @recipe.user_id == current_user.id %>
+        <% if can? :delete, @recipe %>
           <%= button_to "Delete", recipe_recipe_food_path(@recipe, food), method: :delete %>
           <% else %>
           <span>Not allowed</span>

@@ -25,6 +25,54 @@ h4 {
   margin: 0;
 }
 
+.navbar_contain {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.create_button a,
+.recipe_show_buttons a {
+  border: 1px solid black;
+  padding: 2px 3px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 4px 5px #000;
+}
+
+.element_left a,
+.element_left_recipes a {
+  color: black;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.navbar_contain h3 a {
+  color: rgb(27, 26, 26);
+  text-decoration: none;
+  border-bottom: 1px solid rgb(27, 26, 26);
+  border-right: 1px solid rgb(27, 26, 26);
+  padding: 0.5rem 0.5rem;
+}
+
+.navbar_contain div {
+  display: flex;
+}
+
+.navbar_contain div a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: rgb(44, 43, 43);
+  font-weight: bold;
+  border-bottom: 1px solid rgb(44, 43, 43);
+  border-right: 1px solid rgb(44, 43, 43);
+  padding: 0.5rem 1rem;
+}
+
 .container {
   margin: 0 auto;
   max-width: 700px;
@@ -41,15 +89,6 @@ h4 {
   margin-bottom: 1rem;
 }
 
-.create_button a,
-.recipe_show_buttons a {
-  border: 1px solid black;
-  padding: 2px 3px;
-  text-decoration: none;
-  color: black;
-  box-shadow: 4px 5px #000;
-}
-
 .element {
   border: 1px solid black;
   margin-bottom: 1rem;
@@ -58,18 +97,23 @@ h4 {
   justify-content: space-between;
 }
 
+.element p {
+  font-weight: bolder;
+}
+
 .element_left {
   flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   margin-right: 1rem;
 }
 
-.element_left a {
-  color: black;
-  text-decoration: none;
-  margin-bottom: 1rem;
+.element_left_recipes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
 }
 
 .toggle_section button {
