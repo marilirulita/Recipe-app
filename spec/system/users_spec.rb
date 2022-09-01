@@ -31,4 +31,19 @@ RSpec.describe 'Users', type: :system do
         expect(page).to have_content('Welcome! You have signed up successfully.')
       end
     end
+      describe "Test Home page contents" do
+             before :each do
+        @user_one=User.create(name: 'Tadesse Alemayehu',email: "testTadesse@gmail.com", password: '123456')
+         visit new_user_session_path
+        within('#new_user') do
+          fill_in 'user[email]', with: @user_one.email
+          fill_in 'user[password]', with: @user_one.password
+        end
+        click_button('commit')
+      end
+        it "Expect user visit the right home page" do
+        expect(page).to have_content('User Home page')
+        end
+      end
+
 end
