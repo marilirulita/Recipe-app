@@ -50,6 +50,12 @@ input[type="submit"] {
   color: green;
 }
 
+.center {
+  margin: auto;
+  display: block;
+  width: max-content;
+}
+
 .danger {
   background-color: rgb(172, 0, 0);
   border: 2px solid rgb(54, 1, 1);

@@ -1,18 +1,11 @@
-<h1>Shoping list</h1>
+<h1 class="center">Shoping list</h1>
 <div class="fle-box">
-  <div>
     <h3>
-      Amount of food to buy: <%= @shoping_lists.length%>
+      Amount of food to buy: <%= @total_amount%>
     </h3>
     <h3>
-      Total value of food needed: <%= @shoping_lists.reduce(0) {|sum,list| sum+list.price}%>
+      Total value of food needed: $<%= @total_value%>
     </h3>
-  </div>
-  <div>
-    <h3>
-      Recipe: <%= @shoping_lists.length%>
-    </h3>
-  </div>
 </div>
 <table>
   <tr><th>Food</th><th>quantity</th><th>price</th></tr>
