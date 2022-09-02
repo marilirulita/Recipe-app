@@ -7,13 +7,17 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "user", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body>
   <div class='container'>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-    <%= yield %>
+      <% if user_signed_in? %>
+        <%= render 'layouts/navbar' %>
+      <% end %>
+      <%= yield %>
 
     </div>
   </body

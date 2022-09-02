@@ -17,7 +17,7 @@ You must have Ruby installed in your computer.
 
 ### Clone this repo
 
-`https://github.com/Tadesse-Alemayehu/Recipe-app`
+`git clone https://github.com/Tadesse-Alemayehu/Recipe-app`
 
 ### In your terminal, inside the project folder
 
@@ -55,4 +55,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
