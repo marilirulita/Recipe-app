@@ -10,10 +10,12 @@ class ShopingListsController < ApplicationController
       .group(:name)
       @total_value=@shoping_lists.reduce(0) {|sum,list| sum+list.price}
       @total_amount=@shoping_lists.length
-      @shoping_lists=sort_helper(row: 'quantity',order: 'asc')
+      if params[:sort]
+      @shoping_lists=sort_helper(params[:row],params[:order])
+      end
   end
 end
-  def sort_helper(row: 'price', order: 'asc')
+  def sort_helper(row= 'price', order='asc')
     case row
     when 'price'
       return @shoping_lists.sort_by{|store| store.price} unless order!='asc'

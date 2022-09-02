@@ -8,7 +8,16 @@
     </h3>
 </div>
 <table>
-  <tr><th>Food</th><th>quantity</th><th>price</th></tr>
+  <tr><th>Food</th><th>quantity
+    <span>
+  <%= link_to '<', user_shoping_lists_path(sort: true, row:'price', order: "asc")%>
+  <%= link_to '>', user_shoping_lists_path(sort: true, row:'price', order: "des") %>
+  </span>
+  </th><th>price
+    <span>
+  <%= link_to '<', user_shoping_lists_path(sort: true, row:'price', order: "asc")%>
+  <%= link_to '>', user_shoping_lists_path(sort: true, row:'price', order: "des") %>
+  </span></th></tr>
   <% @shoping_lists.each do |food| %>
   <tr>
     <td><%= food.name%></td>
