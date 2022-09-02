@@ -21,9 +21,9 @@ def sort_helper(row, order)
 
     @shoping_lists.sort_by(&:price)
   else
-    return @shoping_lists.sort_by(&:quantity) unless order != 'asc'
+    return @shoping_lists.sort_by(&:name) unless order != 'asc'
 
-    @shoping_lists.sort_by(&:quantity)
+    @shoping_lists.sort_by(&:name)
   end
   @shoping_lists.reverse
 end

@@ -8,12 +8,10 @@
     </h3>
 </div>
 <table>
-  <tr><th>Food</th><th>quantity
-    <span class="flex-column">
-  <%= link_to raw('&#9650;'), user_shoping_lists_path(sort: true, row:'quantity', order: "asc")%>
-  <%= link_to raw('&#9660;'), user_shoping_lists_path(sort: true, row:'quantity', order: "des") %>
-  </span>
-  </th><th>price
+  <tr><th>Food    <span class="flex-column">
+  <%= link_to raw('&#9650;'), user_shoping_lists_path(sort: true, row:'food', order: "asc")%>
+  <%= link_to raw('&#9660;'), user_shoping_lists_path(sort: true, row:'food', order: "des") %>
+  </span></th><th>quantity</th><th>price
     <span class="flex-column">
   <%= link_to raw('&#9650;'), user_shoping_lists_path(sort: true, row:'price', order: "asc")%>
   <%= link_to raw('&#9660;'), user_shoping_lists_path(sort: true, row:'price', order: "des") %>
