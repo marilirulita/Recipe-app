@@ -7,6 +7,16 @@
   padding: 3%;
   font-family: "Roboto", sans-serif;
 }
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+.flex-column a {
+  text-decoration: none;
+  color: black;
+}
 
 .pop-container.centerXY {
   margin: auto;
