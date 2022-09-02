@@ -122,6 +122,7 @@ h4 {
 
 .toggle_section {
   flex: 1;
+  text-align: end;
 }
 
 .toggle_section button {
@@ -206,8 +207,4 @@ h4 {
 
 .content_table table tbody tr:nth-child(odd) {
   background-color: rgb(235, 232, 232);
-}
-
-.toggle_section {
-  text-align: end;
 }
