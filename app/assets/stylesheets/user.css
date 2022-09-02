@@ -20,6 +20,7 @@
 .right {
   float: right;
 }
+
 .pop-container.center-content {
   text-align: center;
 }
@@ -63,6 +64,7 @@ input[type="submit"] {
 .title {
   color: red;
 }
+
 table {
   border-collapse: collapse;
 }
@@ -70,6 +72,7 @@ table {
 table.strip tr:nth-child(2n + 3) {
   background-color: rgb(134, 134, 125);
 }
+
 table td {
   border-bottom: black 1px solid;
 }
