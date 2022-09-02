@@ -19,7 +19,7 @@
   <% @shoping_lists.each do |food| %>
   <tr>
     <td><%= food.name%></td>
-    <td><%= food.quantity%></td>
+    <td><%= food.quantity%> <%=food.measurement_unit%></td>
     <td>$<%= food.price%></td>
   </tr>
   <% end %>
