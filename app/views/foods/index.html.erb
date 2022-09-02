@@ -1,6 +1,8 @@
 
+    <%= button_to 'Add new food', new_user_food_path, method: :get,class: "success right"%>
+
 <div class="pop-container centerXY">
-  <table>
+  <table class="strip">
     <tr><th>Food</th><th>Measurement unit</th><th>Unit price</th><th>quantity</th><th>Action</th></tr>
     <% @my_foods.each do |food| %>
       <tr>
@@ -13,7 +15,6 @@
     <% end %>
   </table>
   <div class="action-buttons">
-    <%= button_to 'Add new food', new_user_food_path, method: :get,class: "success"%>
     <%= button_to 'Home', user_path(current_user), method: :get,class: "success"%>
   </div>
 </div>
