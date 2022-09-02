@@ -55,6 +55,11 @@ input[type="submit"] {
   color: yellow;
 }
 
+.fle-box {
+  display: flex;
+  justify-content: space-between;
+}
+
 .title {
   color: red;
 }
