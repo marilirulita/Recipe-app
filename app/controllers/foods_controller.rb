@@ -10,7 +10,7 @@ class FoodsController < ApplicationController
 
   def create
     @new_food = Food.new(user: current_user, name: params[:name], price: params[:price],
-    measurement_unit: params[:measurement_unit], quantity: params[:quantity])
+                         measurement_unit: params[:measurement_unit], quantity: params[:quantity])
     @new_food.save!
     redirect_to foods_path
   end
@@ -21,5 +21,4 @@ class FoodsController < ApplicationController
     destroy_food.destroy
     redirect_to foods_path
   end
-
 end
