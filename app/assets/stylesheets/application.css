@@ -147,12 +147,13 @@ h4 {
 
 .form_section {
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 300px;
 }
 
 .form_section form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .form_section form input,
@@ -163,7 +164,7 @@ h4 {
 }
 
 .form_section form input[type="submit"] {
-  height: 2.5rem;
+  height: 1.5rem;
 }
 
 .form_section form input[type="checkbox"] {
@@ -191,14 +192,47 @@ h4 {
 .content_table {
   border: 1px solid black;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .content_table table {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2px;
+}
+
+.content_table table thead,
+.content_table table tbody {
+  display: flex;
+  width: 100%;
+}
+
+.content_table table tr {
+  width: 100%;
+  display: flex;
 }
 
 .content_table table th {
+  width: 100%;
   background-color: rgb(192, 189, 189);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 5px;
+  border-right: 1px solid black;
+}
+
+.content_table table td {
+  width: 100%;
+  display: flex;
+  padding: 2px 5px;
+  align-items: center;
+  border-right: 1px solid black;
+}
+
+.content_table table tbody {
+  flex-direction: column;
 }
 
 .content_table table tbody tr {

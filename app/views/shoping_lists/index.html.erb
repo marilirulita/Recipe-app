@@ -1,28 +1,33 @@
-<h1 class="center">Shoping list</h1>
-<div class="fle-box">
+<h2>Shoping list</h2>
+<div class='content_details'>
     <h3>
-      Amount of food items to buy: <%= @total_amount%>
+      Amount of food items to buy: <%= @foods.count %> items
     </h3>
     <h3>
-      Total value of food needed: $<%= @total_value%>
+      Total value of food needed: $<%= @prices %>
     </h3>
 </div>
+
+<div class='content_table'>
 <table>
-  <tr><th>Food    <span class="flex-column">
-  <%= link_to raw('&#9650;'), user_shoping_lists_path(sort: true, row:'food', order: "asc")%>
-  <%= link_to raw('&#9660;'), user_shoping_lists_path(sort: true, row:'food', order: "des") %>
-  </span></th><th>quantity</th><th>price
-    <span class="flex-column">
-  <%= link_to raw('&#9650;'), user_shoping_lists_path(sort: true, row:'price', order: "asc")%>
-  <%= link_to raw('&#9660;'), user_shoping_lists_path(sort: true, row:'price', order: "des") %>
-  </span></th></tr>
-  <% @shoping_lists.each do |food| %>
-  <tr>
-    <td><%= food.name%></td>
-    <td><%= food.quantity%> <%=food.measurement_unit%></td>
-    <td>$<%= food.price%></td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @foods.each do |food| %>
+    <tr>
+      <td><%= food.food.name %></td>
+      <td><%= "#{food.quantity} #{food.food.measurement_unit}" %></td>
+      <td><%=  food.food.price * food.quantity  %></td>
+    </tr>
   <% end %>
 
+  </tbody>
 </table>
 
+</div>

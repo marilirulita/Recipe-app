@@ -1,9 +1,0 @@
-<div class="pop-container centerXY center-content">
-<h1>User Home page</h1>
-<h2>See your details under</h2>
-<%= button_to 'Your list of foods', user_foods_path(current_user), method: :get, class: "info"%>
-<%= button_to 'Your shoping lists', user_shoping_lists_path(current_user), method: :get, class: "info"%>
-
-<%= button_to "Log out", destroy_user_session_path, method: :delete, class: "success"%>
-</div>
-

@@ -1,8 +1,11 @@
 <div class='navbar_contain'>
-<h3><%= link_to "Hi #{current_user.name.capitalize}!", users_path(current_user) %></h3>
+<% if user_signed_in?%>
+<h3><%= "Hi #{current_user.name.capitalize}!"%></h3>
+<% else %>
+<h3>Hi new guest!</h3>
+<% end %>
 <div>
-<%= link_to 'Home', root_path(current_user) %> 
-<%= link_to 'Food', user_foods_path(current_user) %> 
+<%= link_to 'Food', foods_path %> 
 <%= link_to 'Recipes', recipes_path %>
 <%= link_to 'Public Recipes', public_recipes_path %> 
 </div>

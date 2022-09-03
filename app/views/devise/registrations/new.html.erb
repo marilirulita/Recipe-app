@@ -1,33 +1,24 @@
-<div class="pop-container centerXY">
 <h2>Sign up</h2>
-
+<div class='form_section'>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
     <%= f.text_field :name, autocomplete: "name", placeholder: "Name" %>
-  </div>
 
-  <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "Email" %>
-  </div>
-  <div class="field">
+
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password (#{@minimum_password_length} characters minimum)" %>
+    <% else %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
     <% end %>
-  </div>
-  <div class="field">
-    <div><%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %></div>
-  </div>
-  <div class="field">
+
     <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation" %>
-  </div>
-<div class="action-buttons">
-  <div class="actions">
-    <%= f.submit "Sign up", class: "success"%>
-  </div>
-  </div>
+
+    <%= f.submit "Sign up"%>
 <% end %>
 
+<div>
 <%= render "devise/shared/links" %>
+</div>
 </div>

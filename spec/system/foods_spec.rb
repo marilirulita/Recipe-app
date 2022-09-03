@@ -16,7 +16,7 @@ RSpec.describe 'Foods', type: :system do
       click_button('commit')
     end
     it 'assert user is able to see its list of foods' do
-      visit user_foods_path(user_id: User.first)
+      visit foods_path(user_id: User.first)
       expect(page).to have_content('Measurement unit')
     end
   end

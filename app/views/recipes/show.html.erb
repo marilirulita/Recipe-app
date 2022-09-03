@@ -20,7 +20,7 @@
 
 <% if can? :delete, @recipe %>
 <div class='recipe_show_buttons'>
-  <%= link_to "Generate Shopping List", user_shoping_lists_path(@recipe.user) %>
+  <%= link_to "Generate Shopping List", shoping_lists_path(@recipe) %>
   <%= link_to "Add Ingredient", new_recipe_recipe_food_path(@recipe) %>
 </div>
 <% end %>
@@ -40,7 +40,7 @@
 
     <% @recipe_foods.each do |food| %>
       <tr>
-        <td><%= food.food.name.capitalize %></td>
+        <td><%= food.food.name.capitalize%></td>
         <td><%= "#{food.quantity}" %></td>
         <td><%= "$ #{food.food.price}" %></td>
         <td>
