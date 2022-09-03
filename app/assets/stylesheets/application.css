@@ -147,12 +147,14 @@ h4 {
 
 .form_section {
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 300px;
+  width: 100%;
 }
 
 .form_section form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .form_section form input,
