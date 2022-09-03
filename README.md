@@ -1,37 +1,66 @@
+![](https://img.shields.io/badge/Microverse-silver)
+
 # Recipe-app
 
 The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
 ## Built With
+- Ruby
+- Rails
+- SQL
 
-- ROR
-- Postgres
+## Live version
 
-## Getting Started
+- [Live Version](https://afternoon-cove-47787.herokuapp.com/)
+
+# Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
+- Run this command in your OS terminal to get a copy of the project:
+
+  ```
+  git clone git@github.com:marilirulita/Recipe-app.git
+  ```
+
+- Open the folder project from your code editor using:
+
+  ```
+  cd Recipe-app
+  ```
+
+- Run the following commands:
+
+  *To install all gems package in your system:*
+
+  ```
+  bundle install
+  ```
+  
+  *To create a database for the project in your system:*
+
+  ```
+  rails db:create
+  ```
+  
+  *To start the project:*
+
+  ```
+  rails server
+  ```
+
+- To see your application in action, open a browser window and navigate to http://localhost:3000.
+
 ### Prerequisites
 
-You must have Ruby installed in your computer.
+- Visual Studio Code
+- Ruby
+- SQLite3
+- Node
+- Yarn
+- PostgreSQL
 
-### Clone this repo
-
-`git clone https://github.com/Tadesse-Alemayehu/Recipe-app`
-
-### In your terminal, inside the project folder
-
-`rails s`
-
-### Open `127.0.0.1:3000` on your web browser
-
-## Authors
-
-👤 **Tadesse Alemayehu**
-
-- GitHub: [@Tadess-Alemayehu](https://github.com/Tadesse-Alemayehu)
-- Twitter: [@TadesseWebDev](https://twitter.com/TadesseWebDev)
-- LinkedIn: [Tadesse Alemayehu](https://www.linkedin.com/in/tadesse-alemayehu-60141a221/)
+## Author
 
 👤 **Mar Bautista**
 
