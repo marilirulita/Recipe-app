@@ -8,7 +8,7 @@
   </div>
   <div class='element_right'>  
     <p><%= "Total food items: #{recipe.foods.length}" %></p>
-    <p><%= "Total price: #{recipe.foods.map(&:price).sum}" %></p>
+    <p><%= "Total price: $ #{recipe.foods.map(&:price).sum}" %></p>
   </div>
 </div>
 <% end %>

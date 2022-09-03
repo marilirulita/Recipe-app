@@ -23,7 +23,7 @@
     <tr>
       <td><%= food.food.name %></td>
       <td><%= "#{food.quantity} #{food.food.measurement_unit}" %></td>
-      <td><%=  food.food.price * food.quantity  %></td>
+      <td><%= "$ #{food.food.price * food.quantity}" %></td>
     </tr>
   <% end %>
 
