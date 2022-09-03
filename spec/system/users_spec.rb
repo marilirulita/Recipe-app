@@ -44,7 +44,7 @@ RSpec.describe 'Users', type: :system do
       click_button('commit')
     end
     it 'Expect user visit the right home page' do
-      expect(page).to have_content('User Home page')
+      expect(page).to have_content('Hi Tadesse alemayehu!')
     end
   end
 end
