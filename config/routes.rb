@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :users, only: [:index, :show]
-  
+  devise_for :users  
   resources :foods, only: [:index, :new, :create, :destroy]
   resources :shoping_lists, only: [:index]
   resources :recipes, only: [:index, :show, :new, :create, :destroy] do

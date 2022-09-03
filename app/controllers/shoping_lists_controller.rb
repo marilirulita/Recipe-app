@@ -1,6 +1,13 @@
 class ShopingListsController < ApplicationController
   before_action :authenticate_user!
   def index
+    # Actual recipe
+    @recipe = Recipe.find(params[:format])
+    @foods = []
+    @prices = 0
+
+    food_helper
+
     # the list of food that is missing for all recipes of the logged-in user
     @shoping_lists = Food.select('foods.name, foods.measurement_unit,
       sum(foods.quantity) as quantity, sum(foods.price) as price')
@@ -14,6 +21,34 @@ class ShopingListsController < ApplicationController
   end
 end
 
+private
+
+  def food_helper
+    # todas las foods de una receta
+    recipeFoods = RecipeFood.where(recipe_id: @recipe.id).includes([:food])
+    # toda la food en general
+    foods = Food.all
+
+    recipeFoods.each do |recipeFood|
+      foods.each do |food|
+        if recipeFood.food.id == food.id
+          if recipeFood.quantity > food.quantity
+            quantity = recipeFood.quantity - food.quantity
+            newfood = recipeFood
+            newfood.quantity = quantity
+            @foods.push(newfood)
+            @prices += (quantity * food.price)
+          elsif recipeFood.quantity <= food.quantity
+            break
+          else
+            @foods.push(recipeFood)
+            @prices += (recipeFood.quantity * food.price)
+          end
+        end
+      end
+    end
+  end
+  
 def sort_helper(row, order)
   case row
   when 'price'

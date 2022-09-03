@@ -2,7 +2,6 @@ class FoodsController < ApplicationController
   before_action :authenticate_user!
   def index
     @my_foods = Food.where(user: current_user)
-    @user_one = User.first
   end
 
   def new

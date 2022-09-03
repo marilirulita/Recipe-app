@@ -1,10 +1,10 @@
 <h2>Shoping list</h2>
 <div class='content_details'>
     <h3>
-      Amount of food items to buy: <%= @total_amount%>
+      Amount of food items to buy: <%= @foods.count %> items
     </h3>
     <h3>
-      Total value of food needed: $<%= @total_value%>
+      Total value of food needed: $<%= @prices %>
     </h3>
 </div>
 
@@ -12,25 +12,19 @@
 <table>
   <thead>
     <tr>
-      <th>Food <span class="arrows_rigth">
-      <%= link_to raw('&#9650;'), shoping_lists_path(sort: true, row:'food', order: "asc")%>
-      <%= link_to raw('&#9660;'), shoping_lists_path(sort: true, row:'food', order: "des") %>
-      </span></th>
+      <th>Food</th>
       <th>Quantity</th>
-      <th>Price <span class="arrows_rigth">
-      <%= link_to raw('&#9650;'), shoping_lists_path(sort: true, row:'price', order: "asc")%>
-      <%= link_to raw('&#9660;'), shoping_lists_path(sort: true, row:'price', order: "des") %>
-      </span></th>
+      <th>Price</th>
     </tr>
   </thead>
 
   <tbody>
-  <% @shoping_lists.each do |food| %>
-  <tr>
-    <td><%= food.name%></td>
-    <td><%= food.quantity%> <%=food.measurement_unit%></td>
-    <td>$<%= food.price%></td>
-  </tr>
+  <% @foods.each do |food| %>
+    <tr>
+      <td><%= food.food.name %></td>
+      <td><%= "#{food.quantity} #{food.food.measurement_unit}" %></td>
+      <td><%=  food.food.price * food.quantity  %></td>
+    </tr>
   <% end %>
 
   </tbody>
