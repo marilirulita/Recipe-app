@@ -1,20 +1,9 @@
-<div class="pop-container centerXY center-content">
-<h1>Add new food here</h1>
-<%= form_with mode: @new_food, url: user_foods_path do |form| %>
-  <div>
-  <%= form.label :name, "food name"%><br/>
-  <%= form.text_field :name, required: true%>
-  </div>
-  <div>
-  <%= form.label :measurement_unit, "measurement unit"%><br/>
-  <%= form.text_field :measurement_unit%>
-  </div>
-  <div>
-  <%= form.label :price, "Unit price"%><br/>
-  <%= form.number_field :price, required: true%></div>
-    <div class="action-buttons">
-  <div> <%= form.submit class: "success"%></div>
+<div class='form_section'> 
+<%= form_with mode: @new_food, url: foods_path do |form| %>
+  <%= form.text_field :name, placeholder: "Name"%>
+  <%= form.text_field :measurement_unit , placeholder: "Measure unit"%>
+  <%= form.number_field :price, placeholder: "Unite price"%>
+  <%= form.number_field :quantity, placeholder: "Quantity"%>
+  <%= form.submit%>
 <% end %>
-  <%= button_to 'Cancel', user_path(current_user),type: :reset, method: :get, class: "danger"%>
-  </div>
 </div>
