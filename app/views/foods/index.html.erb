@@ -1,9 +1,22 @@
+<div class='list_container'>
+  <div class='create_button'>
+   <%= link_to 'Add new food', new_food_path%>
+ </div>
 
-    <%= button_to 'Add new food', new_food_path, method: :get,class: "success right"%>
+ <div class='content_table'>
+  <table>
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Measurement unit</th>
+        <th>Unit price</th>
+        <th>Quantity</th>
+        <th>Action</th>
+      </tr>
 
-<div class="pop-container centerXY">
-  <table class="strip">
-    <tr><th>Food</th><th>Measurement unit</th><th>Unit price</th><th>quantity</th><th>Action</th></tr>
+    </thead>
+
+    <tbody>
     <% @my_foods.each do |food| %>
       <tr>
         <td><%= food.name%></td>
@@ -13,5 +26,9 @@
         <td><%= button_to 'Delete', food_path(id: food), method: :delete, class: "danger"%></td>
       </tr>
     <% end %>
+
+    </tbody>
   </table>
+</div>
+
 </div>
