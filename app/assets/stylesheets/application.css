@@ -148,7 +148,6 @@ h4 {
 .form_section {
   margin: 0 auto;
   max-width: 300px;
-  width: 100%;
 }
 
 .form_section form {
@@ -165,7 +164,7 @@ h4 {
 }
 
 .form_section form input[type="submit"] {
-  height: 2.5rem;
+  height: 1.5rem;
 }
 
 .form_section form input[type="checkbox"] {
