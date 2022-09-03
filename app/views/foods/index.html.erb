@@ -1,5 +1,5 @@
 
-    <%= button_to 'Add new food', new_user_food_path, method: :get,class: "success right"%>
+    <%= button_to 'Add new food', new_food_path, method: :get,class: "success right"%>
 
 <div class="pop-container centerXY">
   <table class="strip">
@@ -10,7 +10,7 @@
         <td><%= food.measurement_unit%></td>
         <td><%= food.price%></td>
         <td><%= food.quantity%></td>
-        <td><%= button_to 'Delete', user_food_path(id: food), method: :delete, class: "danger"%></td>
+        <td><%= button_to 'Delete', food_path(id: food), method: :delete, class: "danger"%></td>
       </tr>
     <% end %>
   </table>

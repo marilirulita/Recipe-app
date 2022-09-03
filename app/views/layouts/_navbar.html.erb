@@ -1,6 +1,6 @@
 <div class='navbar_contain'>
 <% if user_signed_in?%>
-<h3>"Hi #{current_user.name.capitalize}!"</h3>
+<h3><%= "Hi #{current_user.name.capitalize}!"%></h3>
 <% else %>
 <h3>Hi new guest!</h3>
 <% end %>
